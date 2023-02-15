@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Ahorcado</title>
+  <link href="favicon.ico" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <img src="imagenes/logo-alura.png" alt="Alura Latam" class="logo">
+    <div class="contenedorFlex">
+      <div class="izquierda">
+        <div class="busqueda" id="recuadroBusqueda">
+          <span>
+            <h2 id="titulo">Juego del Ahorcado</h2>
+          </span><br />
+          <span id="instrucciones">
+            <h3>Da click en Jugar para iniciar un nuevo juego. <br /> Da Click en Agregar nueva palabra si deseas desafiar a alguien con una palabra personalizada</h3>
+          </span>
+          <h1 id="palabra"></h1>
+          <canvas id="canvas" width="400" height="400"></canvas>
+        </div>
+      </div>
+      <div class="derecha">
+        <h2 id="alerta"></h2>
+        <h2 id="letras-incorrectas"></h2>
+        <h3 id="intentos"></h3>
+        <textarea class="textoPrincipal izquierda" autofocus placeholder="Escribe aquí una letra" name="textarea"
+          rows="1" cols="" id="letra-input" maxlength="1"
+          oninput="this.value = this.value.replace(/[^a-z, A-Z ]/,'')"></textarea>
+        <button id="boton-checar-palabra" class="botonJugar">Enviar</button>
+        <p id="info"><img src="imagenes/info.png" alt="info"> Sólo letras MAYUSCULAS y sin acentos</p>
+        <button class="botonJugar" id="boton-start-game">Jugar</button><br />
+        <textarea class="textoPrincipal izquierda" autofocus placeholder="Ingresa una Palabra" name="palabra-input"
+          rows="1" cols="" id="palabra-input" maxlength="12"
+          oninput="this.value = this.value.replace(/[^a-z, A-Z ]/,'')"></textarea><br />
+        <button class="botonAgregar" id="boton-agregar-palabra">Agregar Palabra Nueva</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="profile-header-avatarAndEdit-wrapper">
+      <div class="profile-header-avatarAndEdit">
+        <img class="profile-header-avatar"
+          src="https://cdn2.gnarususercontent.com.br/6/473498/56a36bae-59db-4c15-b300-9a378570e113.jpg?width=100&amp;height=100&amp;aspect_ratio=1:1"
+          style="border-color: #2A7AE4" alt="Luis Alberto Zaragoza">
+      </div>
+      <h2 class="nombre-perfil">Luis Alberto Zaragoza</h2>
+      <div class="profile-header-roleLabel">
+        <a class="profile-link profile-LINKEDIN" href="https://www.linkedin.com/in/luis-alberto-zaragoza-frutos"
+          rel="noopener nofollow" target="_blank">
+          <span class="profile-description profile-LINKEDIN-description">
+            Linkedin
+          </span>
+        </a>
+        <a class="profile-link profile-GITHUB" href="https://github.com/AlbertoZF" rel="noopener nofollow"
+          target="_blank">
+          <span class="profile-description profile-GITHUB-description">
+            Github
+          </span>
+        </a>
+        <a class="profile-link profile-TWITTER" href="https://twitter.com/bubulubueno" rel="noopener nofollow"
+          target="_blank">
+          <span class="profile-description profile-TWITTER-description">
+            Twitter
+          </span>
+        </a>
+        <a class="profile-link profile-ALURA" href="https://app.aluracursos.com/user/alberto" rel="noopener nofollow"
+          target="_blank">
+          <span class="profile-description profile-ALURA-description">
+            Alura
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>
